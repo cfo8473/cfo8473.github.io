@@ -199,6 +199,7 @@ input, select, textarea {
 			text-transform: uppercase;
 		}
 
+
 			a.special:not(.button):before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
@@ -233,6 +234,7 @@ input, select, textarea {
 
 			a.special:not(.button):hover:before {
 				background-color: rgba(255, 255, 255, 0.025);
+				color: rgb(255, 230, 116);
 			}
 
 			a.special:not(.button):active:before {
@@ -3899,16 +3901,22 @@ input, select, textarea {
 			}
 
 			.wrapper.spotlight .image {
-				border-radius: 100%;
+				/* border-radius: 100%; */
 				margin: 0 3em 2em 0;
-				width: 22em;
+				width: 17em;
 				overflow: hidden;
 				-ms-flex: 1;
 			}
 
 				.wrapper.spotlight .image img {
-					border-radius: 100%;
+					/* border-radius: 100%; */
 					width: 100%;
+				}
+
+				.wrapper.spotlight .image img:hover {
+					/* border-radius: 100%; */
+					transform: scale(1.3);
+					transition: 0.4s;
 				}
 
 			.wrapper.spotlight .content {
