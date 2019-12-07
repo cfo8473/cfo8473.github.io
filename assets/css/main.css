@@ -23,7 +23,9 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+z-index: 4;}
+	
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -3008,7 +3010,7 @@ input, select, textarea {
 	}
 
 	.rightsp {
-float: right;
+		float: right;
 	}
 
 	.link-container {
@@ -3481,6 +3483,100 @@ float: right;
 			opacity: 1;
 		}
 
+		#bg {
+		-moz-animation: bg 60s linear infinite;
+		-webkit-animation: bg 60s linear infinite;
+		-ms-animation: bg 60s linear infinite;
+		animation: bg 60s linear infinite;
+		-moz-backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-moz-transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+
+
+		background: #348cb2 url("../../images/bg3.jpg") bottom left;
+		background-repeat: repeat-x;
+		height: 100%;
+		left: 0;
+		opacity: 0.1;
+		position: fixed;
+		top: 0;
+		z-index: 0;
+	}
+
+	@-moz-keyframes bg {
+		0% {
+			-moz-transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
+			-ms-transform: translate3d(0,0,0);
+			transform: translate3d(0,0,0);
+		}
+
+		100% {
+			-moz-transform: translate3d(-2250px,0,0);
+			-webkit-transform: translate3d(-2250px,0,0);
+			-ms-transform: translate3d(-2250px,0,0);
+			transform: translate3d(-2250px,0,0);
+		}
+	}
+
+	@-webkit-keyframes bg {
+		0% {
+			-moz-transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
+			-ms-transform: translate3d(0,0,0);
+			transform: translate3d(0,0,0);
+		}
+
+		100% {
+			-moz-transform: translate3d(-2250px,0,0);
+			-webkit-transform: translate3d(-2250px,0,0);
+			-ms-transform: translate3d(-2250px,0,0);
+			transform: translate3d(-2250px,0,0);
+		}
+	}
+
+	@-ms-keyframes bg {
+		0% {
+			-moz-transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
+			-ms-transform: translate3d(0,0,0);
+			transform: translate3d(0,0,0);
+		}
+
+		100% {
+			-moz-transform: translate3d(-2250px,0,0);
+			-webkit-transform: translate3d(-2250px,0,0);
+			-ms-transform: translate3d(-2250px,0,0);
+			transform: translate3d(-2250px,0,0);
+		}
+	}
+
+	@keyframes bg {
+		0% {
+			-moz-transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
+			-ms-transform: translate3d(0,0,0);
+			transform: translate3d(0,0,0);
+		}
+
+		100% {
+			-moz-transform: translate3d(-2250px,0,0);
+			-webkit-transform: translate3d(-2250px,0,0);
+			-ms-transform: translate3d(-2250px,0,0);
+			transform: translate3d(-2250px,0,0);
+		}
+	}
+
+	#bg {
+		background-size: 2250px auto;
+		width: 6750px;
+	}
+
 /* Banner */
 
 	#banner {
@@ -3573,7 +3669,7 @@ float: right;
 			#banner {
 				padding: 7em 0 8.25em 0 ;
 				background-color: #2e3141;
-				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg2.jpg");
 				background-size: auto,
  cover;
 				background-position: center,
@@ -3582,6 +3678,8 @@ float: right;
 			}
 
 		}
+
+
 
 		@media screen and (max-width: 980px) {
 
@@ -3685,7 +3783,7 @@ float: right;
 		#wrapper > header {
 			padding: 9em 0 6.25em 0 ;
 			background-color: #2e3141;
-			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg2.jpg");
 			background-size: auto,
  cover;
 			background-position: center,
@@ -4184,7 +4282,7 @@ float: right;
 
 		#footer {
 			background-color: #2e3141;
-			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg2.jpg");
 			background-size: auto,
  cover;
 			background-position: center,
