@@ -4510,7 +4510,7 @@ input, select, textarea {
 		overflow: hidden;
 		width: 140px;
 		line-height: 4px;
-		height: 30px;
+		height: 40px;
 		transition: all 1.2s, border 0.5s 1.2s, box-shadow 0.3s 1.5s;
 		white-space: nowrap;
 		text-indent: 23px;
