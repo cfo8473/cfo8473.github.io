@@ -223,6 +223,8 @@ input, select, textarea {
 				border-radius: 100%;
 				border: solid 2px rgba(255, 255, 255, 0.125);
 				content: '\f105';
+
+
 				display: inline-block;
 				font-size: 1.25em;
 				height: 2em;
@@ -237,6 +239,8 @@ input, select, textarea {
 			a.special:not(.button):hover:before {
 				background-color: rgba(255, 255, 255, 0.025);
 				color: rgb(255, 230, 116);
+				animation-name: spinnyLogo;
+  			animation-duration: 0.48s;
 			}
 
 			a.special:not(.button):active:before {
@@ -446,7 +450,45 @@ input, select, textarea {
 
 		.row > .col-3 {
 			width: 25%;
+
+			animation: 0.5s ease-out 0s 1 slideDownOut;
 		}
+
+		.row > .animated {
+
+			animation: 0.5s ease-out 0s 1 slideDown;
+		}
+		
+
+	@keyframes zoomIn {
+		0% {
+			-webkit-transform: scale3d(1,1,1);
+		}
+		100% {
+			-webkit-transform: scale3d(0.1,0.1,1);
+		}
+	}
+
+	@keyframes zoomOut {
+		0% {
+			-webkit-transform: scale3d(0.1,0.1,1);
+			
+		}
+		100% {
+			-webkit-transform: scale3d(1,1,1);
+		}
+	}
+
+	@keyframes spinnyLogo {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+
 
 		.row > .off-3 {
 			margin-left: 25%;
@@ -471,6 +513,8 @@ input, select, textarea {
 		.row > .col-6 {
 			width: 50%;
 		}
+
+		
 
 		.row > .off-6 {
 			margin-left: 50%;
@@ -3049,8 +3093,10 @@ input, select, textarea {
 	}
 
 	.goodies:hover {
-		transform: scale(1.2);
-		transition: 0.8s;
+
+		animation-name: spinnyLogo;
+		animation-duration: 0.78s;
+		/* animation-iteration-count: infinite; */
 	}
 
 
@@ -4372,7 +4418,7 @@ input, select, textarea {
 	}
 
 
-.article-left {
+.article-left  {
 	position: relative;
 	animation: 0.6s ease-out 0s 1 slideLeft;
 }
@@ -4405,3 +4451,133 @@ input, select, textarea {
     transform: translateX(0);
   }
 }
+
+
+@keyframes slideRightOut {
+  0% {
+
+    transform: translateX(0);
+  }
+
+  100% {
+
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+
+    transform: translateY(100%);
+  }
+
+  100% {
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes slideDownOut {
+  0% {
+
+    transform: translateY(0);
+  }
+
+  100% {
+
+    transform: translateY(100%);
+  }
+}
+
+@keyframes spinnyLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+	.button-xform {
+		display: inline-block;
+		/* border: 5px solid transparent; */
+		background: #AED6D1;
+		background: rgb(98, 177, 137);
+		color: #55706D;
+		border-radius: 40px;
+		padding: 15px 15px;
+		overflow: hidden;
+		width: 140px;
+		line-height: 4px;
+		height: 30px;
+		transition: all 1.2s, border 0.5s 1.2s, box-shadow 0.3s 1.5s;
+		white-space: nowrap;
+		text-indent: 23px;
+		font-weight: bold;
+	}
+	.button-xform span {
+		display: inline-block;
+		-webkit-transform: translateX(300px);
+						transform: translateX(300px);
+		font-weight: normal;
+		opacity: 0;
+		transition: opacity 0.1s 0.5s, -webkit-transform 0.4s 0.5s;
+		transition: opacity 0.1s 0.5s, transform 0.4s 0.5s;
+		transition: opacity 0.1s 0.5s, transform 0.4s 0.5s, -webkit-transform 0.4s 0.5s;
+	}
+	.button-xform:hover {
+		text-indent: 0;
+		background: #55706D;
+		color: #FFE8A3;
+		width: 250px;
+		box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
+	}
+	.button-xform:hover span {
+		-webkit-transform: translateX(0);
+						transform: translateX(0);
+		opacity: 1;
+	}
+
+		.button-xform-git {
+		display: block;
+		justify-content: center;
+		margin: auto;
+		/* border: 5px solid transparent; */
+		background: rgb(180, 230, 224);
+		background: rgba(150, 201, 175, 0.459);
+		color: #55706D;
+
+		padding: 15px 15px;
+		overflow: hidden;
+		width: 140px;
+
+		line-height: 4px;
+		height: 80px;
+		transition: all 1.2s, border 0.5s 1.2s, box-shadow 0.3s 1.5s;
+		white-space: nowrap;
+		text-indent: 23px;
+		font-weight: bold;
+	}
+	.button-xform-git span {
+		display: inline-block;
+		-webkit-transform: translateX(300px);
+						transform: translateX(300px);
+		font-weight: normal;
+		opacity: 0;
+		transition: opacity 0.1s 0.5s, -webkit-transform 0.4s 0.5s;
+		transition: opacity 0.1s 0.5s, transform 0.4s 0.5s;
+		transition: opacity 0.1s 0.5s, transform 0.4s 0.5s, -webkit-transform 0.4s 0.5s;
+	}
+	.button-xform-git:hover {
+		text-indent: 0;
+		background: #55706D;
+		color: #FFE8A3;
+		width: 250px;
+		box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
+	}
+	.button-xform-git:hover span {
+		-webkit-transform: translateX(0);
+						transform: translateX(0);
+		opacity: 1;
+	}
