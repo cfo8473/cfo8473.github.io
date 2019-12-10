@@ -3129,7 +3129,7 @@ input, select, textarea {
 
 				opacity: 1;
 				transition: 1.2s;
-				transform: scale(1.1);
+				transform: scale(1.2);
 				
 			}
 
@@ -4370,3 +4370,38 @@ input, select, textarea {
 		}
 
 	}
+
+
+.article-left {
+	position: relative;
+	animation: 0.6s ease-out 0s 1 slideLeft;
+}
+
+.article-right {
+	position: relative;
+	animation: 0.6s ease-out 0s 1 slideRight;
+}
+
+@keyframes slideLeft {
+  0% {
+
+    transform: translateX(-100%);
+  }
+
+  100% {
+
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+
+    transform: translateX(100%);
+  }
+
+  100% {
+
+    transform: translateX(0);
+  }
+}
