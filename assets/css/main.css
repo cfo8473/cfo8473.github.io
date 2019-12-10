@@ -3093,6 +3093,8 @@ input, select, textarea {
 	}
 
 	.goodies:hover {
+		color: rgb(255, 212, 95);
+		transition: 0.8s;
 
 		animation-name: spinnyLogo;
 		animation-duration: 0.78s;
