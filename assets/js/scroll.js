@@ -16,7 +16,7 @@ if (IntersectionObserver) {
   //Create the observer
   let observer = new IntersectionObserver(callback, {
     root: null,
-    threshold: 0.3
+    threshold: 0.6
   });
 
   //Get and observe all the items with the item class
