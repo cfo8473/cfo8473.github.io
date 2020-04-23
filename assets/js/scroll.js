@@ -8,9 +8,11 @@ if (IntersectionObserver) {
       if (entry.isIntersecting &&
         !entry.target.classList.contains('animated')) {
         entry.target.classList.add('animated');
-      } else { 
+      } 
+      
+      /*else { 
         entry.target.classList.remove('animated');
-      }
+      }*/
     });
   }
   //Create the observer
